@@ -22,8 +22,9 @@ function createTable(id, name, salary, age){
 
     var btnEdit = document.createElement("BUTTON");
     btnEdit.className = "btn btn-secondary";
+    btnEdit.id = "btnEdit"
     btnEdit.innerHTML = "<i class='fa fa-edit'></i>"; 
-    btnEdit.addEventListener('click', function(event){
+    id === "1" ? btnEdit.disabled = true : btnEdit.addEventListener('click', function(event){
         event.preventDefault();
         editEmployee(id, name, salary, age);
     });
@@ -31,7 +32,7 @@ function createTable(id, name, salary, age){
     var btnEraser = document.createElement("BUTTON");
     btnEraser.className = "btn btn-secondary";
     btnEraser.innerHTML = "<i class='fa fa-eraser'></i>";
-    btnEraser.addEventListener('click', function(event){
+    id === "1" ? btnEraser.disabled = true : btnEraser.addEventListener('click', function(event){
         event.preventDefault();
         deleteEmployee(id);
     }); 
