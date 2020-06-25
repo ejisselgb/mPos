@@ -1,0 +1,10 @@
+#btn-add{
+    width: 100%;
+    margin: 10px 0 10px 0;
+}
+
+@media (max-width: 600px) {
+    #hide{
+        display: none !important;
+    }
+}
