@@ -59,7 +59,7 @@ export class InterfaceComponent implements OnInit {
 
   deleteEmployee(id){
     this.servicesService.deleteEmployee(id).subscribe(response => {
-      response.status === "failed" ? alert("No ha sido posible ejecutar correctamente la acción, ERROR: " + response.message) : alert("El usuario no. " + id + " se ha eliminado correctamente");
+      alert("El usuario no. " + id + " se ha eliminado correctamente");
     }, error => {
       alert("Ha ocurrido un error por favor intente nuevamente: " + error);
     })
